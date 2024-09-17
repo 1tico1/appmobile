@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "jsEngine": "hermes",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "name": "gift-app",
+    "slug": "giftselector"
+    
+  }
+}
