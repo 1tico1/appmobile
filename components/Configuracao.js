@@ -25,7 +25,8 @@ const Configuracoes = () => {
 
   const db = getDatabase();
   const storage = getStorage();
-  const navigation = useNavigation(); // Hook de navegação
+  const navigation = useNavigation();
+  const navigation2 = useNavigation(); // Hook de navegação
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -96,7 +97,6 @@ const Configuracoes = () => {
     }
   };
 
-  // Função para salvar o evento e tipo de distribuição na AsyncStorage e redirecionar
   // Função para salvar o evento e tipo de distribuição na AsyncStorage e redirecionar
   const saveSelectedEventForDisplay = async (eventId, type) => {
     try {
@@ -170,9 +170,9 @@ const Configuracoes = () => {
         <LoginComponent onLoginSuccess={() => setIsLoggedIn(true)} />
       ) : (
         <>
+          <View style={styles.divider} />
           <Text style={styles.titulo}>Configurações</Text>
-
-
+          
           {/* Nova seção para selecionar o evento e o tipo de distribuição para a tela principal */}
           <View style={styles.divider} />
           <Text style={styles.titulo}>Selecionar Evento para Exibir na Tela Principal</Text>
